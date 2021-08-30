@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="AgogSuite">
+
+	<listeners>
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+		<listener class-name="com.agog.listerners.CustomListeners" />
+	</listeners>
+
+	<test thread-count="5" name="TestLogin">
+		<classes>
+			<class name="com.agog.testcases.LoginTest" />
+		</classes>
+	</test> <!-- TestLogin -->
+	
+	<test thread-count="5" name="Search_Home">
+		<classes>
+			<class name="com.agog.testcases.HomePageTest" />
+		</classes>
+	</test> <!-- TestLogin -->
+	
+	<test thread-count="5" name="DateSelectionTest">
+		<classes>
+			<class name="com.agog.testcases.VehiclesShipmentTest" />
+		</classes>
+	</test> <!-- TestLogin -->
+	
+	
+</suite> <!-- Suite -->

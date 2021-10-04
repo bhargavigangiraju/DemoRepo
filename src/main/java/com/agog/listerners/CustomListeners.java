@@ -1,6 +1,7 @@
 package com.agog.listerners;
 
 import java.io.IOException;
+
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 
@@ -14,7 +15,6 @@ import org.testng.ITestResult;
 import org.testng.Reporter;
 
 import com.agog.base.TestBase;
-import com.agog.utilities.MonitoringMail;
 import com.agog.utilities.TestConfig;
 import com.agog.utilities.TestUtils;
 import com.relevantcodes.extentreports.LogStatus;
@@ -65,26 +65,4 @@ public class CustomListeners extends TestBase implements ITestListener, ISuiteLi
 	}
 
 	
-	public void onFinish(ISuite suite) {
-		
-	    MonitoringMail mail=new MonitoringMail();
-		
-			try {
-				messageBody = "http://"+InetAddress.getLocalHost().getHostAddress()+":8080/job/AgogDemoAutomation/Extent_20Report/";
-			} catch (UnknownHostException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		
-	    try {
-			mail.sendMail(TestConfig.server, TestConfig.from, TestConfig.to, TestConfig.subject, messageBody);
-		} catch (AddressException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (MessagingException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-	  }
 }

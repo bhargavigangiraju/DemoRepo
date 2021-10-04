@@ -17,6 +17,7 @@
 	<test thread-count="5" name="Search_Home">
 		<classes>
 			<class name="com.agog.testcases.HomePageTest" />
+			
 		</classes>
 	</test> <!-- TestLogin -->
 	

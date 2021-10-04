@@ -92,7 +92,7 @@ public class TestBase {
 
 			if (config.getProperty("browser").equals("Chrome")) {
 				System.setProperty("webdriver.chrome.driver",
-						"C:\\Users\\Terralogic\\Downloads\\chromedriver_win32 (2)\\chromedriver.exe");
+						"C:\\Users\\Terralogic\\Downloads\\chromedriver_win32 (1)\\chromedriver.exe");
 				driver = new ChromeDriver();
 				log.debug("Browser launched successfully!!!");
 			} else if (config.getProperty("browser").equals("Firefox")) {

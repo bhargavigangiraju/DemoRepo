@@ -18,7 +18,6 @@ public class LoginTest extends TestBase{
 	public void loginTest() throws InterruptedException, IOException {
 		
 		
-		verifyAssert("TEST", "test1");
 		Thread.sleep(2000);
 		log.debug("On login page");
 		
